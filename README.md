@@ -18,14 +18,15 @@ The bot will help you view **channels** and **groups** where you are the **owner
 Install dependencies:
 
 ```bash
-pip install python-telegram-bot==21.8
+pip install python-telegram-bot==21.8 ppython-dotenvyt
+mv .env.example .env
 ```
 
 ## ⚙️ Configuration
 
 1. Create a new bot with [@BotFather](https://t.me/BotFather)
 2. Copy your **bot token**
-3. Replace `BOT_TOKEN` in `bot.py` with your token
+3. Replace `BOT_TOKEN` in `.env` with your token
 
 ## 🚀 Run the bot
 

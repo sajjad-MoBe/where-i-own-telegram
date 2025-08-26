@@ -18,8 +18,11 @@ from telegram.ext import (
     MessageHandler,
     filters,
 )
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-BOT_TOKEN = "8368343328:AAFGpjr5VDk0qvaEWm5YxXt8WkA0L-27eRA" # Replace with your bot token
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 START_EN = (
     "The bot helps you view channels and groups where you are the owner or an administrator, "
