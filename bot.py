@@ -40,7 +40,7 @@ START_FA = (
 
 def build_main_keyboard() -> ReplyKeyboardMarkup:
     btn_channels_admin = KeyboardButton(
-        text="list of channels where i am an admin",
+        text="List Of Channels Where I Am An Admin",
         request_chat=KeyboardButtonRequestChat(
             request_id=101,
             chat_is_channel=True,
@@ -61,7 +61,7 @@ def build_main_keyboard() -> ReplyKeyboardMarkup:
     )
 
     btn_groups_admin = KeyboardButton(
-        text="list of group chats where i am an admin",
+        text="List Of Group Chats Where I Am An Admin",
         request_chat=KeyboardButtonRequestChat(
             request_id=102,
             chat_is_channel=False,
@@ -82,7 +82,7 @@ def build_main_keyboard() -> ReplyKeyboardMarkup:
     )
 
     btn_my_channels = KeyboardButton(
-        text="List of my channels",
+        text="List Of My Channels",
         request_chat=KeyboardButtonRequestChat(
             request_id=201,
             chat_is_channel=True,
@@ -103,7 +103,7 @@ def build_main_keyboard() -> ReplyKeyboardMarkup:
     )
 
     btn_my_groups = KeyboardButton(
-        text="List of my group chats",
+        text="List Of My Group Chats",
         request_chat=KeyboardButtonRequestChat(
             request_id=202,
             chat_is_channel=False,
@@ -135,7 +135,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not update.message:
         return
     await update.message.reply_text(
-        START_EN + "\n------------------------\n" + START_FA,
+        START_EN + "\n\n------------------------\n\n" + START_FA,
         reply_markup=build_main_keyboard(),
         disable_web_page_preview=True,
     )
@@ -191,7 +191,7 @@ async def on_chat_shared(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         + (f"\nیوزرنیم: @{username}" if username else "")
     )
 
-    await update.message.reply_markdown(text_en + "\n------------------------\n" + text_fa)
+    await update.message.reply_markdown(text_en + "\n\n------------------------\n\n" + text_fa)
 
 async def echo_or_help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not update.message:
