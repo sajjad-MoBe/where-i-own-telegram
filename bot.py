@@ -135,7 +135,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not update.message:
         return
     await update.message.reply_text(
-        START_EN + "\n\n------------------------\n\n" + START_FA,
+        START_EN + "\n\n---------------------------------\n\n" + START_FA,
         reply_markup=build_main_keyboard(),
         disable_web_page_preview=True,
     )
@@ -186,12 +186,11 @@ async def on_chat_shared(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         f"Name: {name_part_en}\nChat ID: `{chat_id}`{username_part}"
     )
     text_fa = (
-        f"شما این {chat_type_str_fa} را با ربات به اشتراک گذاشتید.\n"
         f"نام: {name_part_fa}\nشناسه چت (Chat ID): `{chat_id}`"
         + (f"\nیوزرنیم: @{username}" if username else "")
     )
 
-    await update.message.reply_markdown(text_en + "\n\n------------------------\n\n" + text_fa)
+    await update.message.reply_markdown(text_en + "\n\n---------------------------------\n\n" + text_fa)
 
 async def echo_or_help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not update.message:
