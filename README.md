@@ -52,4 +52,4 @@ python bot.py
 
 ---
 
-> Made with ❤️ by [https://t.me/imSajjadMB](@imSajjadMB)
+> Made with ❤️ by [@imSajjadMB](https://t.me/imSajjadMB)
